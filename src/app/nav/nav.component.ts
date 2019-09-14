@@ -9,6 +9,10 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
+  toggleLang(selectedLang: string) {
+    console.log(selectedLang);
+  }
+
   ngOnInit() {
   }
 
