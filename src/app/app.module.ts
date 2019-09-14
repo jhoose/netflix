@@ -7,6 +7,9 @@ import { InspirationComponent } from './inspiration/inspiration.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { EpisodesComponent } from './episodes/episodes.component';
 
+import { LanguageService } from './language.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +19,10 @@ import { EpisodesComponent } from './episodes/episodes.component';
     EpisodesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
