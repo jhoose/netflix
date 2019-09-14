@@ -10,4 +10,22 @@ export class LanguageService {
   constructor(
     private http: HttpClient
   ) { }
+
+  use(lang: string): Promise<{}> {
+    return new Promise<{}>((resolve, reject) => {
+      const langPath = `assets/i18n/${lang || 'en_US'}.json`;
+
+      this.http.get<{}>(langPath).subscribe(
+        translation => {
+          this.data = Object.assign({}, translation || {});
+          resolve(this.data);
+        },
+        error => {
+          this.data = {};
+          resolve(this.data);
+        }
+      );
+    });
+  }
+
 }
