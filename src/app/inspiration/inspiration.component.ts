@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-inspiration',
@@ -7,6 +8,9 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./inspiration.component.css']
 })
 export class InspirationComponent implements OnInit {
+
+  faQuoteLeft = faQuoteLeft;
+  faQuoteRight = faQuoteRight;
 
   @Input() lang: any;
 
@@ -21,7 +25,6 @@ export class InspirationComponent implements OnInit {
 
   getSafeUrl(url: string) {
     return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
-
   }
 
 }

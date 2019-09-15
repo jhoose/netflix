@@ -11,8 +11,6 @@
         <div class="row my-3">
 
         <div class="col-lg-6 col-md-12 mb-4">
-            <!-- TODO: put image src into var {{ logo }} -->
-            <!-- <img src="assets\img\stanger-things_raw.png" class="d-block w-100" alt="..."> -->
             <img [src]='logo' class="d-block w-100" alt="...">
         </div>
 
@@ -21,9 +19,11 @@
             <blockquote class="blockquote m-3">
             
             <p>
-                <i class="fas fa-quote-left"></i>
+                <fa-icon [icon]="faQuoteLeft"></fa-icon>
+                <!-- <i class="fas fa-quote-left"></i> -->
                     {{ lang.quote.text }}
-                <i class="fas fa-quote-right"></i>
+                <!-- <i class="fas fa-quote-right"></i> -->
+                <fa-icon [icon]="faQuoteRight"></fa-icon>
             </p>
             
             <footer class="blockquote-footer">
@@ -56,10 +56,11 @@
             and order-12 aka last aka on bottom
         -->
         <div class="col-lg-6 col-md-12 order-lg-1 order-md-12">
-            roate \ random or list all snippets with for loop and dot between them?
-            <p>
-                {{ lang.snippets }}
-            </p>
+            <div *ngFor='let snip of lang.snippets'>
+                <p>
+                    {{ snip }}
+                </p>
+            </div>
 
         </div>
 

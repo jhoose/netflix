@@ -11,6 +11,8 @@ import { LanguageService } from './language.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LangPipe } from './lang.pipe';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 // export function setupTranslateFactory(
 //   service: LanguageService): Function {
 //   return () => service.use('en_US');
@@ -27,7 +29,8 @@ import { LangPipe } from './lang.pipe';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [
     LanguageService,
