@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  @Output() langSelectionEvent = new EventEmitter<string>();
+
+  constructor(
+    private language: LanguageService
+  ) { }
 
   toggleLang(selectedLang: string) {
+    console.log('toggleLang on Nav value:');
     console.log(selectedLang);
+    this.langSelectionEvent.emit(selectedLang);
   }
 
   ngOnInit() {

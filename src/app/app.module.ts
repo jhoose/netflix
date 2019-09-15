@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -9,6 +9,12 @@ import { EpisodesComponent } from './episodes/episodes.component';
 
 import { LanguageService } from './language.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LangPipe } from './lang.pipe';
+
+// export function setupTranslateFactory(
+//   service: LanguageService): Function {
+//   return () => service.use('en_US');
+// }
 
 @NgModule({
   declarations: [
@@ -16,13 +22,22 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     InspirationComponent,
     GalleryComponent,
-    EpisodesComponent
+    EpisodesComponent,
+    LangPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [LanguageService],
+  providers: [
+    LanguageService,
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: setupTranslateFactory,
+    //   deps: [ LanguageService ],
+    //   multi: true
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

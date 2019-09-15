@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-
-import English from '../assets/i18n/en_US.json';
-import Latin from '../assets/i18n/la_PG.json';
-
 import { LanguageService } from './language.service.js';
 
 @Component({
@@ -11,15 +7,19 @@ import { LanguageService } from './language.service.js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'netflix';
-  title = English.heading;
-  // title = Latin.heading;
+  lang = 'en_US';
 
-  constructor(private language: LanguageService) {
+  constructor(
+    private language: LanguageService
+  ) {
     language.use('en_US').then(() => {
-      console.log('Current JSON data file dump:');
-      console.log(language.data);
+      // console.log('Current JSON data file dump:');
+      // console.log(language.data);
     });
+  }
+
+  setLang(lang: string) {
+    this.language.use(lang);
   }
 
 }

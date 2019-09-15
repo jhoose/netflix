@@ -14,10 +14,18 @@ export class LanguageService {
   use(lang: string): Promise<{}> {
     return new Promise<{}>((resolve, reject) => {
       const langPath = `assets/i18n/${lang || 'en_US'}.json`;
+      // const langPath = `assets/i18n/${lang || 'la_PG'}.json`;
+
+      // console.log('On Language Service | Use method | json file:');
+      // console.log(langPath);
 
       this.http.get<{}>(langPath).subscribe(
-        translation => {
-          this.data = Object.assign({}, translation || {});
+        language => {
+          this.data = Object.assign({}, language || {});
+
+          // console.log('Language Service | current data:');
+          // console.log(this.data);
+
           resolve(this.data);
         },
         error => {

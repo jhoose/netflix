@@ -1,14 +1,14 @@
-<app-nav></app-nav>
+<app-nav (langSelectionEvent)="setLang($event)"></app-nav>
 
 <main role="main" class="container">
 
-  <div class="starter-template">
+  <div class="starter-template" *ngIf="language.data.heading">
 
     <h1 class="text-center mb-4">
-      Stranger Things - {{ title }}
+        {{ language.data.heading }}
     </h1>
 
-    <app-inspiration></app-inspiration>
+    <app-inspiration [lang]="language.data"></app-inspiration>
 
     <app-gallery></app-gallery>
 
