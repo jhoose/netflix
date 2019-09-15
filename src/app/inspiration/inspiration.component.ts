@@ -10,7 +10,7 @@ export class InspirationComponent implements OnInit {
 
   @Input() lang: any;
 
-  videoURL = '';
+  logo = 'assets/img/stanger-things_raw.png';
 
   constructor(
     private domSanitizer: DomSanitizer
