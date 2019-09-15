@@ -21,23 +21,20 @@
             
             <p>
                 <i class="fas fa-quote-left"></i>
-                <!-- {{ quote.text }} -->
-                We have Mirkwood which is, of course, at the intersection of Cornwallis and Kerley, which is really close to where we grew up
+                    {{ lang.quote.text }}
                 <i class="fas fa-quote-right"></i>
             </p>
             
             <footer class="blockquote-footer">
                 <cite title="Source Title">
-                    <!-- {{ quote.author }} -->
-                    Matt Duffer
+                    {{ lang.quote.author }}
                 </cite>
             </footer>
             
             </blockquote>
 
             <p class="lead m-3">
-            <!-- {{ description }} -->
-            The Duffer Brothers, born and raised in Durham, drop quite a few Durham-area references in the Emmy-winning hit sci-fi series 'Stranger Things' that they write, direct and produce.
+                {{ lang.description }}
             </p>
             
 
@@ -58,25 +55,20 @@
             and order-12 aka last aka on bottom
         -->
         <div class="col-lg-6 col-md-12 order-lg-1 order-md-12">
+            roate \ random or list all snippets with for loop and dot between them?
             <p>
-            <!-- {{ snippets }} -->
-            
-            idk?????
-            
-            "It's where Cornwallis and Kerley meet. - Hopper",
-            "Described as 'A love letter to the ’80s classics that captivated a generation,' \"Stranger Things\" is set in 1983 in Indiana, \"where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.\"",
-            "Despite the fact that none of the series was filmed in Durham or North Carolina (it was filmed in Georgia), a ton of references to the region are hidden in the show."
-
+                {{ lang.snippets }}
             </p>
 
         </div>
 
         <div class="col-lg-6 col-md-12 order-lg-12 order-md-1 mb-4">
 
-            <!-- {{ video-embed }} -->
+            {{ lang.videoEmbed }}
             <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.newsobserver.com/news/local/article182498126.html/video-embed" allowfullscreen>
-            </iframe>
+                <!-- <iframe class="embed-responsive-item" src="https://www.newsobserver.com/news/local/article182498126.html/video-embed" allowfullscreen> -->
+                <iframe class="embed-responsive-item" [src]='getSafeUrl(lang.videoEmbed)' allowfullscreen>
+                </iframe>
             </div>
 
         </div>

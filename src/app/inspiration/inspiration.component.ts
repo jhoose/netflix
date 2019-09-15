@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-inspiration',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InspirationComponent implements OnInit {
 
-  constructor() { }
+  @Input() lang: any;
+
+  videoURL = '';
+
+  constructor(
+    private domSanitizer: DomSanitizer
+  ) {}
 
   ngOnInit() {
+  }
+
+  getSafeUrl(url: string) {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
+
   }
 
 }
