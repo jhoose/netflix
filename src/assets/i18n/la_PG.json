@@ -37,91 +37,108 @@
             "text": "apmay ofyay Hawkins"
         }
     ],
-    "episode-list": [
+    "episodeList": [
         {
             "season": 2,
             "name": "apterchay nine: ethay ategay",
-            "rating": 9.4
+            "rating": 9.4,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay eight: ethay indmay ayerflay",
-            "rating": 9.3
+            "rating": 9.3,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay eight: ethay upsideyay ownday",
-            "rating": 9.3
+            "rating": 9.3,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay six: ethay yspay",
-            "rating": 9.2
+            "rating": 9.2,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay seven: ethay athtubbay",
-            "rating": 9.1
+            "rating": 9.1,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay five: igday ugday",
-            "rating": 8.9
+            "rating": 8.9,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay three: ollyhay , ollyjay",
-            "rating": 8.9
+            "rating": 8.9,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay four: ethay odybay",
-            "rating": 8.9
+            "rating": 8.9,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay six: ethay onstermay",
-            "rating": 8.8
+            "rating": 8.8,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay four: Will ethay iseway",
-            "rating": 8.7
+            "rating": 8.7,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay three: ethay ollywogpay",
-            "rating": 8.7
+            "rating": 8.7,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay five: ethay eaflay andyay ethay acrobatyay",
-            "rating": 8.7
+            "rating": 8.7,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay one: ethay anishingvay ofyay Will Byers",
-            "rating": 8.6
+            "rating": 8.6,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay two: icktray oryay eattray , eakfray",
-            "rating": 8.5
+            "rating": 8.5,
+            "chapter": 9
         },
         {
             "season": 1,
             "name": "apterchay two: ethay eirdoway onyay aplemay eetstray",
-            "rating": 8.5
+            "rating": 8.5,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay one: MADMAX",
-            "rating": 8.4
+            "rating": 8.4,
+            "chapter": 9
         },
         {
             "season": 2,
             "name": "apterchay seven: ethay ostlay istersay",
-            "rating": 6.1
+            "rating": 6.1,
+            "chapter": 9
         }
     ]
 }
