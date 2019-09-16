@@ -13,6 +13,8 @@ import { LangPipe } from './lang.pipe';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // export function setupTranslateFactory(
 //   service: LanguageService): Function {
 //   return () => service.use('en_US');
@@ -30,7 +32,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [
     LanguageService,
