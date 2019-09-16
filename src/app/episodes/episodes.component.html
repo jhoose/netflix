@@ -10,48 +10,44 @@
         <!-- START INNER Episodes row -->
         <div class="row my-3">
 
-        <!-- START Episodes Column 1 -->
-        <div class="col-lg-6 col-md-12 mb-4">
+            <!-- START Episodes Column 1 -->
+            <div class="col-lg-6 col-md-12 mb-4">
 
-            <h5 class="mb-4">
-            Season 1
-            </h5>
+                <h5 class="mb-4">
+                Season 1
+                </h5>
 
-            <!-- 
-             TODO: remove *ngIf='episode.season == 1' and put it in Components where sorting is done
-            -->
+                <div class="list-group" *ngFor='let episode of sortedEpisodes'>
+                    <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngIf='episode.season == 1'>
+                        {{ episode.name }}
+                        <span class="badge badge-primary badge-pill" title="Rating">
+                            <fa-icon [icon]="faStar"></fa-icon> {{ episode.rating }}
+                        </span>
+                    </button>
+                </div>
 
-            <div class="list-group" *ngFor='let episode of sortedEpisodes'>
-                <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngIf='episode.season == 1'>
-                    {{ episode.name }}
-                    <span class="badge badge-primary badge-pill" title="Rating">
-                        <fa-icon [icon]="faStar"></fa-icon> {{ episode.rating }}
-                    </span>
-                </button>
+
             </div>
+            <!-- END Episodes Column 1 -->
 
+            <!-- START Episodes Column 2 -->
+            <div class="col-lg-6 col-md-12 mb-4">
 
-        </div>
-        <!-- END Episodes Column 1 -->
+                <h5 class="mb-4">
+                Season 2
+                </h5>
 
-        <!-- START Episodes Column 2 -->
-        <div class="col-lg-6 col-md-12 mb-4">
+                <div class="list-group" *ngFor='let episode of sortedEpisodes'>
+                    <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngIf='episode.season == 2'>
+                        {{ episode.name }}
+                        <span class="badge badge-primary badge-pill" title="Rating">
+                            <fa-icon [icon]="faStar"></fa-icon> {{ episode.rating }}
+                        </span>
+                    </button>
+                </div>
 
-            <h5 class="mb-4">
-            Season 2
-            </h5>
-
-            <div class="list-group" *ngFor='let episode of sortedEpisodes'>
-                <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngIf='episode.season == 2'>
-                    {{ episode.name }}
-                    <span class="badge badge-primary badge-pill" title="Rating">
-                        <fa-icon [icon]="faStar"></fa-icon> {{ episode.rating }}
-                    </span>
-                </button>
             </div>
-
-        </div>
-        <!-- END Episodes Column 2 -->
+            <!-- END Episodes Column 2 -->
 
         </div>
         <!-- END INNER Episodes row -->

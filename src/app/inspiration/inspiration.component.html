@@ -7,7 +7,7 @@
             </h4>
         </a>
 
-<!-- START Inspiration Row 1 -->
+        <!-- START Inspiration Row 1 -->
         <div class="row my-3">
 
         <div class="col-lg-6 col-md-12 mb-4">
@@ -20,9 +20,7 @@
             
             <p>
                 <fa-icon [icon]="faQuoteLeft"></fa-icon>
-                <!-- <i class="fas fa-quote-left"></i> -->
                     {{ lang.quote.text }}
-                <!-- <i class="fas fa-quote-right"></i> -->
                 <fa-icon [icon]="faQuoteRight"></fa-icon>
             </p>
             
@@ -41,20 +39,12 @@
 
         </div>
 
-        </div><!-- END Inspiration Row 1 -->
+        </div>
+        <!-- END Inspiration Row 1 -->
 
-
-<!-- START Inspiration Row 2 -->
+        <!-- START Inspiration Row 2 -->
         <div class="row my-3">
 
-        <!--
-            Bootstrap 4:
-            col-6 for large screens
-            and col-12 for medium or smaller screens
-
-            order-1 aka first aka on top
-            and order-12 aka last aka on bottom
-        -->
         <div class="col-lg-6 col-md-12 order-lg-1 order-md-12">
             <div *ngFor='let snip of lang.snippets'>
                 <p>
@@ -73,8 +63,8 @@
 
         </div>
 
-        </div><!-- END Inspiration Row 2 -->
-
+        </div>
+        <!-- END Inspiration Row 2 -->
 
     </div>
 </div>
