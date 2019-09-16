@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  @Input() lang: any;
+
+  constructor(
+    private domSanitizer: DomSanitizer
+  ) { }
 
   ngOnInit() {
+  }
+
+  getSafeUrl(url: string) {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }

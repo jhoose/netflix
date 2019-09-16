@@ -15,20 +15,13 @@ export class EpisodesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    // const episodesArray = this.lang.episodeList;
-
-    // console.log('Episodes Array:');
-    // console.log(episodesArray);
-
-    // episodesArray.sort((a: any, b: any) => {
-    //   return a.chapter - b.chapter;
-    // });
-
   }
 
   get sortedEpisodes() {
     const episodesArray = this.lang.episodeList;
+
+    // console.log('Episodes Array:');
+    // console.log(episodesArray);
 
     return episodesArray.sort((a: any, b: any) => {
       return a.chapter - b.chapter;
